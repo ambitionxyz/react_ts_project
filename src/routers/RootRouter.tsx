@@ -1,7 +1,12 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import { PublicLayout, SuspenseComponent } from "../../src/components";
+import {
+  PublicLayout,
+  SuspenseComponent,
+  PublicNotFound,
+} from "../../src/components";
+import LoginPage from "../../src/pages/login/LoginPage";
 import { ROUTER_PATH } from "../../src/constants/routers/constans";
 
 const RootRouters: React.FC = () => {
@@ -20,8 +25,10 @@ const NavigateRouter: React.FC = () => {
           path="/"
           element={<Navigate to={ROUTER_PATH.LOGIN} replace={true} />}
         />
-        <Route path={ROUTER_PATH.LOGIN} element={<div>man log in</div>} />
+        <Route path={ROUTER_PATH.LOGIN} element={<LoginPage />} />
       </Route>
+
+      <Route element={<PublicNotFound />} path="*" />
     </Routes>
   );
 };

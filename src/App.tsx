@@ -6,16 +6,16 @@ import { useAppDispatch } from "../src/stores";
 import { changeLanguage } from "../src/stores/common/i18n/i18n.aciton";
 
 function App() {
-  // const { t } = useTranslation();
-  // const dispatch = useAppDispatch();
+  const { t } = useTranslation();
+  const dispatch = useAppDispatch();
 
   return (
     <div className="App">
-      {/* <div>test i18n</div> */}
-      {/* <button onClick={() => dispatch(changeLanguage("jp"))}>
+      <div>test i18n</div>
+      <button onClick={() => dispatch(changeLanguage("jp"))}>
         doi ngon ngu
-      </button> */}
-      {/* {t("common.demo")} */}
+      </button>
+      {t("common.demo")}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
