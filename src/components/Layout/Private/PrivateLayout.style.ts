@@ -1,12 +1,12 @@
 import { Layout } from "antd";
 import styled from "styled-components";
 
-import Background from "src/assets/Images/background-image.svg";
+// import Background from "src/assets/Images/background-image.svg";
 
 export const PrivateLayoutStyle = styled(Layout)`
   height: 100%;
   width: 100%;
-  background: url(${Background}) no-repeat;
+
   background-size: cover;
 
   .ant-spin-nested-loading,

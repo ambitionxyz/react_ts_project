@@ -1,5 +1,10 @@
 {
   "common": {
-    "demo": "demo"
+    "menu": {
+      "home": "Home",
+      "live": "Live",
+      "liveShow": "Live Show",
+      "game": "Game"
+    }
   }
 }

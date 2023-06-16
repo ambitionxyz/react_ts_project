@@ -1,6 +1,9 @@
 export const ROUTER_PATH = {
+  SIGN_UP: "/signup",
   LOGIN: "/login",
-  HOME: "/home",
-  USERS: "/users",
-  DASHBOARD: "/dashboard",
+
+  HOME: "/",
+  LIVE: "/lives",
+  LIVE_SHOW: "game/185",
+  GAME: "/games",
 };

@@ -8,6 +8,7 @@ import {
 } from "../../src/components";
 import LoginPage from "../../src/pages/login/LoginPage";
 import { ROUTER_PATH } from "../../src/constants/routers/constans";
+import DashBoardPage from "../pages/common/Dashboard/dashboard";
 
 const RootRouters: React.FC = () => {
   return (
@@ -23,7 +24,8 @@ const NavigateRouter: React.FC = () => {
       <Route element={<PublicLayout />}>
         <Route
           path="/"
-          element={<Navigate to={ROUTER_PATH.LOGIN} replace={true} />}
+          element={<DashBoardPage />}
+          // element={<Navigate to={ROUTER_PATH.LOGIN} replace={true} />}
         />
         <Route path={ROUTER_PATH.LOGIN} element={<LoginPage />} />
       </Route>

@@ -9,7 +9,7 @@ const NotFound: React.FC = () => {
   return (
     <NotFoundStyle>
       <Divider>Page Not Found Page</Divider>
-      <Link to={ROUTER_PATH.DASHBOARD}>
+      <Link to={ROUTER_PATH.HOME}>
         <u>Go to dashboard</u>
       </Link>
     </NotFoundStyle>
