@@ -5,6 +5,8 @@ import {
   PublicLayout,
   SuspenseComponent,
   PublicNotFound,
+  PrivateLayout,
+  PrivateNotFound,
 } from "../../src/components";
 import LoginPage from "../../src/pages/login/LoginPage";
 import { ROUTER_PATH } from "../../src/constants/routers/constans";
@@ -18,14 +20,30 @@ const RootRouters: React.FC = () => {
   );
 };
 
+export default RootRouters;
+
+const flagLogin = false;
+
 const NavigateRouter: React.FC = () => {
-  return (
+  return flagLogin ? (
+    <Routes>
+      <Route element={<PrivateLayout />}>
+        {/* <Route
+          path="/"
+          // element={<DashBoardPage />}
+          element={<Navigate to={ROUTER_PATH.LOGIN} replace={true} />}
+        />
+        <Route path={ROUTER_PATH.LOGIN} element={<LoginPage />} /> */}
+      </Route>
+
+      <Route element={<PrivateNotFound />} path="*" />
+    </Routes>
+  ) : (
     <Routes>
       <Route element={<PublicLayout />}>
         <Route
           path="/"
-          element={<DashBoardPage />}
-          // element={<Navigate to={ROUTER_PATH.LOGIN} replace={true} />}
+          element={<Navigate to={ROUTER_PATH.LOGIN} replace={true} />}
         />
         <Route path={ROUTER_PATH.LOGIN} element={<LoginPage />} />
       </Route>
@@ -34,5 +52,3 @@ const NavigateRouter: React.FC = () => {
     </Routes>
   );
 };
-
-export default RootRouters;

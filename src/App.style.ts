@@ -9,7 +9,7 @@ export const AppStyle = styled.section`
 
   /* TYPOGRAPHY */
   .ant-typography {
-    color: #ffffff99;
+    color: #010101;
   }
 
   .ant-typography.linear-text {

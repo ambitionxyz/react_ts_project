@@ -12,11 +12,11 @@ const PublicLayout: React.FC = () => {
   return (
     <PublicLayoutStyle>
       <MainLayoutStyle>
-        <HeaderPage />
+        {/* <HeaderPage /> */}
         <div className="wrap-content">{outlet}</div>
-        <FooterPage />
+        {/* <FooterPage /> */}
       </MainLayoutStyle>
-      <FloatNavigatorComponent />
+      {/* <FloatNavigatorComponent /> */}
     </PublicLayoutStyle>
   );
 };
